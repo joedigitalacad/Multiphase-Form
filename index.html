@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multiphase Form using Javascript</title>
+	<script type="text/javascript" src="app.js"></script>
+	<style type="text/css">
+		#stageTwo,#stageThree,#stageFour{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<form method="post" action="register.php" onsubmit="return processForm()">
+		<!-- first stage -->
+		<div id="stageOne">
+			<h1>Stage 1 of 4</h1>
+			Fullname: <input type="text" name="fullname" id="fullname"><br>
+			<span style="color: red" id="fullnameError"></span><br>
+			Username: <input type="text" name="username" id="username"><br>
+			<span style="color: red" id="usernameError"></span><br>
+			Password: <input type="password" name="password" id="password"><br>
+			<span style="color: red" id="passwordError"></span><br>
+			Email: <input type="email" name="email" id="email"><br>
+			<span style="color: red" id="emailError"></span><br>
+			Number: <input type="text" name="number" id="number"><br>
+			<span style="color: red" id="numberError"></span><br>
+			<button type="button" id="btnStageOne" onclick="processStageOne()">Next</button>
+			<hr>
+		</div>
+
+		<!-- Stage two begins here -->
+		<div id="stageTwo">
+			<h1>Stage 2 of 4</h1>
+			Age: <input type="text" name="age" id="age"><br>
+			<span style="color: red" id="ageError"></span><br>
+			Address: <input type="text" name="address" id="address"><br>
+			<span style="color: red" id="addressError"></span><br>
+			<button type="button" id="btnStageTwo" onclick="processStageTwo()">Next</button><hr>
+		</div>
+
+		<!-- Stage Three Begins here -->
+		<div id="stageThree">
+			<h1>Stage 3 of 4</h1>
+			Message: <textarea name="message" id="message" rows="10" cols="10"></textarea><br>
+			<span style="color: red" id="messageError"></span><br>
+			<button type="button" id="btnStageThree"onclick="processStageThree()">Next</button><hr>
+		</div>
+
+		<!-- Last stage -->
+		<div id="stageFour">
+			<h1>Stage 4 of 4</h1>
+			<p id="popFullname"></p>
+			<p id="popUsername"></p>
+			<p id="popEmail"></p>
+			<p id="popNumber"></p>
+			<p id="popAge"></p>
+			<p id="popAddress"></p>
+			<p id="popMessage"></p>
+			<input type="submit" value="Submit Form" name="submit">
+		</div>
+	</form>
+</body>
+</html>
